@@ -1,0 +1,24 @@
+name: Ruby QA framework
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ["3.2", "3.3"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
+      - name: Run RSpec unit tests
+        run: bundle exec rspec
+      - name: Check Ruby conventions
+        run: bundle exec rubocop
+      - name: Validate Cucumber feature and step loading
+        run: bundle exec cucumber --dry-run

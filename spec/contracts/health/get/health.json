@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "required": ["status", "application"],
+  "properties": {
+    "status": { "const": "UP" },
+    "application": { "const": "estantedigital" }
+  }
+}

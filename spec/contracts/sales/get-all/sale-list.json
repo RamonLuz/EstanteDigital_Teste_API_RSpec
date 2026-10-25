@@ -1,0 +1,43 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "customer", "employee", "book", "saleDate"],
+    "properties": {
+      "id": { "type": "integer", "minimum": 1 },
+      "customer": {
+        "type": "object",
+        "required": ["id", "name", "cpf", "status"],
+        "properties": {
+          "id": { "type": "integer", "minimum": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "cpf": { "type": "string", "minLength": 11 },
+          "status": { "type": "string", "minLength": 1 }
+        }
+      },
+      "employee": {
+        "type": "object",
+        "required": ["id", "name", "cpf", "registrationNumber", "position", "status"],
+        "properties": {
+          "id": { "type": "integer", "minimum": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "cpf": { "type": "string", "minLength": 11 },
+          "registrationNumber": { "type": "integer", "minimum": 1 },
+          "position": { "type": "string", "minLength": 1 },
+          "status": { "type": "string", "minLength": 1 }
+        }
+      },
+      "book": {
+        "type": "object",
+        "required": ["id", "title", "author", "price"],
+        "properties": {
+          "id": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "author": { "type": "string", "minLength": 1 },
+          "price": { "type": "number", "exclusiveMinimum": 0 }
+        }
+      },
+      "saleDate": { "type": "string", "format": "date" }
+    }
+  }
+}

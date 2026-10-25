@@ -1,0 +1,3 @@
+require_relative "estante_digital_api/configuration"
+require_relative "estante_digital_api/http_client"
+require_relative "estante_digital_api/response_contract_validator"

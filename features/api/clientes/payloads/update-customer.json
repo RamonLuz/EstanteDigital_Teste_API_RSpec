@@ -1,0 +1,5 @@
+{
+  "name": "Cliente QA ${unique}",
+  "cpf": "${unique}",
+  "status": "INACTIVE"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "cpf", "status"],
+    "properties": {
+      "id": { "type": "integer", "minimum": 1 },
+      "name": { "type": "string", "minLength": 1 },
+      "cpf": { "type": "string", "minLength": 1 },
+      "status": { "type": "string", "minLength": 1 },
+      "purchases": {
+        "type": ["array", "null"],
+        "items": {
+          "type": "object",
+          "required": ["id", "title", "author", "price"],
+          "properties": {
+            "id": { "type": "integer", "minimum": 1 },
+            "title": { "type": "string", "minLength": 1 },
+            "author": { "type": "string", "minLength": 1 },
+            "price": { "type": "number", "exclusiveMinimum": 0 }
+          }
+        }
+      }
+    }
+  }
+}

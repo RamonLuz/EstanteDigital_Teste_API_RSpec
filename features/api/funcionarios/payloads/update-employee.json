@@ -1,0 +1,7 @@
+{
+  "name": "Funcionário QA ${unique}",
+  "cpf": "${unique}",
+  "registrationNumber": ${registration},
+  "position": "QA",
+  "status": "INACTIVE"
+}

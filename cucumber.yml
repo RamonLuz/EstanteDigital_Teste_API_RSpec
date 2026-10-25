@@ -1,0 +1,2 @@
+default: --require features --format pretty --tags "not @mutating"
+mutating: --require features --format pretty --tags @mutating

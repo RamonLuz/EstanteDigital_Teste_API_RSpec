@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "required": ["status", "message", "field"],
+  "properties": {
+    "status": { "const": 400 },
+    "message": { "type": "string", "minLength": 1 },
+    "field": { "const": "Body" }
+  }
+}

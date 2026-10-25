@@ -1,0 +1,29 @@
+AllCops:
+  DisabledByDefault: true
+  NewCops: enable
+  TargetRubyVersion: 3.2
+
+Layout/IndentationWidth:
+  Enabled: true
+  Width: 2
+
+Layout/IndentationStyle:
+  Enabled: true
+  EnforcedStyle: spaces
+
+Layout/EndOfLine:
+  Enabled: true
+  EnforcedStyle: lf
+
+Layout/LineLength:
+  Enabled: true
+  Max: 80
+
+Layout/TrailingEmptyLines:
+  Enabled: true
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Lint/Syntax:
+  Enabled: true

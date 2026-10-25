@@ -1,0 +1,7 @@
+{
+  "name": "Funcionário da venda ${unique}",
+  "cpf": "${unique}",
+  "registrationNumber": ${registration},
+  "position": "QA",
+  "status": "ACTIVE"
+}
